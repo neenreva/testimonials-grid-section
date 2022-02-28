@@ -13,6 +13,76 @@
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
+body {
+    background-color: var(--Lightgrayishblue);
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+main {
+    display: grid;
+    grid-template-columns: 375px;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+        'card1'
+        'card2'
+        'card3'
+        'card4'
+        'card5';
+    place-content: center;
+}
+
+.card {
+    background-color: var(--White);
+    box-shadow: 1px 12px 10px var(--Lightgrayishblue);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.card1 {
+    grid-area: card1;
+    background-color: var(--Moderateviolet);
+}
+.card2 {
+    grid-area: card2;
+}
+.card3 {
+    grid-area: card3;
+}
+.card4 {
+    grid-area: card4;
+}
+.card5 {
+    grid-area: card5;
+}
+
+.people {
+    display: flex;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.card--name {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card--status {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card--review {
+
+}
+
+footer { 
+    font-size: 11px; text-align: center; 
+}
+
+a { 
+    color: hsl(228, 45%, 44%); 
+
+}
+
