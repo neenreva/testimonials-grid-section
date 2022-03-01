@@ -114,3 +114,25 @@ a {
   text-decoration: none;
   color: var(--Moderateviolet);
 }
+
+@media (min-width: 800px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card1 card2 card5"
+            "card3 card4 card4 card5";
+        padding: 5rem;
+        gap: 1.5rem
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
