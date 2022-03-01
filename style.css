@@ -21,7 +21,7 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 375px;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto);
   grid-template-areas:
     "card1"
@@ -47,6 +47,11 @@ main {
   background-image: url(images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: 90% 0%;
+}
+
+.outline {
+    outline: 2px solid;
+    outline-color: rgba(255, 255, 255, 50%);
 }
 .card2 {
   grid-area: card2;
@@ -115,24 +120,42 @@ a {
   color: var(--Moderateviolet);
 }
 
-@media (min-width: 800px) {
-    main {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas:
-            "card1 card1 card2 card5"
-            "card3 card4 card4 card5";
-        padding: 5rem;
-        gap: 1.5rem
-    }
+@media (min-width: 1000px) {
+  body {
+    width: 100vw;
+  }
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "card1 card1 card2 card5"
+      "card3 card4 card4 card5";
+    padding: 11.5vw;
+    gap: 1.5rem 2rem;
+  }
 
-    .card {
-        margin: 0;
-    }
+  .card1 {
+    background-position: 81% 0%;
+  }
 
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
+  .card {
+    margin: 0;
+  }
+
+  .card--review {
+    padding: 1.1rem 0.3rem 1rem 0;
+  }
+
+  .card--comment {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    letter-spacing: 0.25px;
+    padding-bottom: 0.5rem;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 }
