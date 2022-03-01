@@ -1,88 +1,116 @@
 :root {
-    --Moderateviolet: hsl(263, 55%, 52%);
-    --Verydarkgrayishblue: hsl(217, 19%, 35%);
-    --Verydarkblackishblue: hsl(219, 29%, 14%);
-    --Lightgray: hsl(0, 0%, 81%);
-    --Lightgrayishblue: hsl(210, 46%, 95%);
-    --White: hsl(0, 0%, 100%);
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+  --White: hsl(0, 0%, 100%);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Barlow Semi Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  box-sizing: border-box;
+  font-size: 100%;
 }
 
 body {
-    background-color: var(--Lightgrayishblue);
+  background-color: var(--Lightgrayishblue);
 }
 
 main {
-    display: grid;
-    grid-template-columns: 375px;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: 
-        'card1'
-        'card2'
-        'card3'
-        'card4'
-        'card5';
-    place-content: center;
+  display: grid;
+  grid-template-columns: 375px;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5";
+  place-content: center;
 }
 
 .card {
-    background-color: var(--White);
-    box-shadow: 1px 12px 10px var(--Lightgrayishblue);
-    border-radius: 1rem;
-    padding: 2rem;
-    margin: 2rem;
+  background-color: var(--White);
+  box-shadow: 1px 12px 10px var(--Lightgrayishblue);
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 1.5rem 0rem 1.5rem;
 }
 
 .card1 {
-    grid-area: card1;
-    background-color: var(--Moderateviolet);
+  grid-area: card1;
+  background-color: var(--Moderateviolet);
+  color: var(--White);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 0%;
 }
 .card2 {
-    grid-area: card2;
+  grid-area: card2;
+  background-color: var(--Verydarkgrayishblue);
+  color: var(--White);
 }
 .card3 {
-    grid-area: card3;
+  grid-area: card3;
 }
 .card4 {
-    grid-area: card4;
+  grid-area: card4;
+  background-color: var(--Verydarkblackishblue);
+  color: var(--White);
 }
 .card5 {
-    grid-area: card5;
+  grid-area: card5;
 }
 
 .people {
-    display: flex;
+  display: flex;
+  align-items: center;
 }
 
 img {
-    border-radius: 50%;
+  border-radius: 50%;
+  height: 1.85rem;
+}
+
+.card--name,
+.card--status {
+  font-size: 0.75rem;
+  padding-left: 1rem;
 }
 
 .card--name {
-    font-size: 1rem;
-    font-weight: 600;
+  font-weight: 500;
 }
 
 .card--status {
-    font-size: 1rem;
-    font-weight: 500;
+  font-weight: 400;
+  opacity: 50%;
 }
 
 .card--review {
-
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 1.25rem 0.3rem 1rem 0;
 }
 
-footer { 
-    font-size: 11px; text-align: center; 
+.card--comment {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  letter-spacing: 0.45px;
+  padding-bottom: 0.5rem;
 }
 
-a { 
-    color: hsl(228, 45%, 44%); 
-
+footer {
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 1rem 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--Moderateviolet);
+}
